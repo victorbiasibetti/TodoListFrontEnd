@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Container } from './styles';
 
-//TROCAR ISSO PARA UMA DIV
-
 export default function TaskTable({tasks, deleteTask, editTask}) {
   return (
     <Container>
@@ -26,8 +24,8 @@ export default function TaskTable({tasks, deleteTask, editTask}) {
                   <td>{task.description} </td>
                   <td>{task.status ? 'OK' : ''} </td>
                   <td>
-                    <button onClick={() => editTask(task)}>Editar</button>
-                    <button onClick={() => deleteTask(task.id)}>Apagar</button>
+                    <button onClick={() => editTask(task)} className="edit">Editar</button>
+                    <button onClick={() => deleteTask(task.id)} className="delete">Apagar</button>
                   </td>
                 </tr>
               ))
