@@ -7,6 +7,7 @@ import { Container } from './styles';
 export default function TaskTable({tasks, deleteTask, editTask}) {
   return (
     <Container>
+      <h2>Lista de Tarefas</h2>
       <table>
         <thead>
           <tr>

@@ -54,7 +54,8 @@ export default function TaskForm({taskEdit, addTask, editTaskArray}) {
     
   }, [taskEdit])
   return (
-    <Container onSubmit={handleSubmit}>
+    <Container>
+      <h2>Adicionar Tarefa</h2>
       <label>Título</label>
       <input 
         type="text" 
@@ -76,7 +77,7 @@ export default function TaskForm({taskEdit, addTask, editTaskArray}) {
         checked={task.status}
         value={task.status} 
         onChange={handleInputChange} />
-      <button>Salvar</button>
+      <button onClick={handleSubmit}>Salvar</button>
     </Container>
   )
 }

@@ -35,9 +35,7 @@ const App = () => {
       if(task.id === removedID)
           idx = index;
     })
-    /*if(idx > 0)
-      tasks.splice(idx)
-    */
+    
     const index = tasks.findIndex(e => e.id === removedID)
     console.log(index)
     setTasks([...tasks.slice(0, index), ...tasks.slice(index +1)])
@@ -69,20 +67,14 @@ const App = () => {
     <Container>
       <h1>Tarefas</h1>
       <Forms>
-        <div>
-          <h2>Adicionar Tarefa</h2>
-          <TaskForm 
-            addTask={addTask} 
-            taskEdit={taskEdit} 
-            editTaskArray={editTaskArray}/>
-        </div>
-        <div>
-          <h2>Lista de Tarefas</h2>
-          <TaskTable 
-            tasks={tasks} 
-            deleteTask={handleDelete} 
-            editTask={editTask}/>
-        </div>
+        <TaskForm 
+          addTask={addTask} 
+          taskEdit={taskEdit} 
+          editTaskArray={editTaskArray}/>
+        <TaskTable 
+          tasks={tasks} 
+          deleteTask={handleDelete} 
+          editTask={editTask}/>
       </Forms>
     </Container>
   );
