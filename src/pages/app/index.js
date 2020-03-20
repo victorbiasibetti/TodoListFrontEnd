@@ -30,12 +30,6 @@ const App = () => {
     
     const removedID = response.data.id;
     
-    let idx = -1;
-    tasks.map((task, index) => {
-      if(task.id === removedID)
-          idx = index;
-    })
-    
     const index = tasks.findIndex(e => e.id === removedID)
     console.log(index)
     setTasks([...tasks.slice(0, index), ...tasks.slice(index +1)])
@@ -59,7 +53,6 @@ const App = () => {
   }
 
   function editTask(editTask){
-    //console.log(editTask)
     setTaskEdit(editTask)
   }
 

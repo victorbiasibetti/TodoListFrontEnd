@@ -35,6 +35,7 @@ export const Container = styled.div`
     color: #fff;
     font-weight: bold;
     grid-column: 1/3;
+    font-size: 20px;
   }
   
   
